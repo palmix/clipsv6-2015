@@ -1,0 +1,1 @@
+[16-Apr-2013 16:31:28 America/Chicago] PHP Warning:  mysql_fetch_object(): supplied argument is not a valid MySQL result resource in /home/dimahnan/public_html/schedule/hloun/SQL.php on line 48

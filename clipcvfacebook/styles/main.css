@@ -1,0 +1,203 @@
+body {
+	background-color: #a7a7a7;
+	padding: 0;
+	margin: 0 auto;
+	width: 960px;
+}
+#header {
+	background-image: url(logo.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	height: 220px;
+	padding: 10px 0;
+	padding-right: 260px;
+	padding-top: 30px;
+}
+#header #quote {
+	background-image: -webkit-linear-gradient(top,rgba(0,0,0,0.3),rgba(0,0,0,0.1));
+	border-radius: 10px;
+	height: 190px;
+	box-shadow: inset 0px 2px 5px -1px rgba(0,0,0,0.5);
+	position: relative;
+	padding: 10px;
+}
+#header #quote:after {
+	background-color: #818181;
+	width: 20px;
+	height: 20px;
+	box-shadow: inset -2px 2px 4px -1px rgba(0,0,0,0.3);
+	position: absolute;
+	-webkit-transform: rotate(45deg);
+	content: "";
+	top: 50px;
+	right: -10px;
+}
+#header #quote h1 {
+	color: #FFF;
+	font-family: cocon;
+	font-weight: normal;
+	font-size: 30px;
+	padding: 0;
+	margin: 0;
+	text-shadow: 0 1px 2px #000;
+	text-align: center;
+}
+#header #quote h2 {
+	color: #333;
+	font-family: cocon;
+	font-weight: normal;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 120%;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.15);
+}
+#header #quote h2 span {
+	display: none;
+}
+.step {
+	float: right;
+}
+.step.last {
+	float: left;
+}
+.step .img {
+	width: 360px;
+	height: 320px;
+	padding: 5px;
+	border-radius: 10px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #FFF;
+	box-shadow: inset 0 0 0 5px #FFF,
+	inset 0 1px 5px 4px #000,
+	0 1px 5px -1px #000;
+}
+.step  span {
+	display: block;
+	margin: 20px 0;
+	background-color: #666;
+	border-radius: 5px;
+}
+.step  span b {
+	font-size: 30px;
+	color: #FFF;
+	font-family: cocon;
+	font-weight: normal;
+	text-shadow: 0 1px 2px #000;
+}
+.step  span b i {
+	display: block;
+	float: left;
+	width: 50px;
+	height: 50px;
+	font-style: normal;
+	float: right;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: middle;
+	background-color: #333;
+	border-radius: 30px;
+	box-shadow: inset 0 0 0 5px #FFF, inset 0 1px 5px 4px #000, 0 1px 5px -1px #000; 
+	margin-top: -5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.step u {
+	display: block;
+	font-family: cocon;
+	text-decoration: none;
+	width: 350px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+.facebook {
+	border: 1px solid #CCC;
+	border-color: #29447e;
+	border-bottom-color: #1a356e;
+	color: #fff;
+	background-color: #5872a7;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#637bad), to(#5872a7));
+	background-image: -webkit-linear-gradient(#637bad, #5872a7);
+	background-image: -moz-linear-gradient(#637bad, #5872a7);
+	background-image: -ms-linear-gradient(#637bad, #5872a7);
+	background-image: -o-linear-gradient(#637bad, #5872a7);
+	background-image: linear-gradient(#637bad, #5872a7);
+	-webkit-box-shadow: inset 0 1px 0 #879ac0;
+	box-shadow: inset 0 1px 0 #879ac0;
+	height: 36px;
+	line-height: 36px;
+	font-size: 24px;
+	border-radius: 2px;
+	width: 250px;
+	margin: 5px auto;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+	cursor: pointer;
+}
+.facebook b {
+	font-weight: normal;
+}
+.facebook:before {
+	content: "";
+	float: right;
+	width: 36px;
+	height: 36px;
+	background: url(../images/social.png) no-repeat 99px 99px;
+	border-left: 1px solid #465f94;
+	background-position: 0 0;
+	background-position: 0 -22px;
+	display: block;
+}
+.facebook:active {
+	background: #4f6aa3;
+	-webkit-box-shadow: inset 0 1px 0 #45619d;
+	box-shadow: inset 0 1px 0 #45619d;
+}
+.thanks {
+	display: none;
+	background-image: -webkit-linear-gradient(top, #ffb84c, #ff8601);
+	border-radius: 5px;
+	border: 1px solid #b7660d;
+	border-bottom-width: 3px;
+	padding: 10px;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.3), inset 0 -1px 1px rgba(255,255,255,0.3),
+}
+.thanks h1 {
+	color: #FFF;
+	font-family: cocon;
+	font-weight: normal;
+	font-size: 25px;
+	padding: 0;
+	margin: 0;
+	text-shadow: 0 1px 2px #000;
+	overflow: hidden;
+}
+.thanks span {
+	color: #4f2c05;
+	font-family: cocon;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 110%;
+	padding: 0;
+	margin: 0;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+	width: 600px;
+	display: block;
+}
+.thanks .info {
+	height: 90px;
+	width: 90px;
+	float: left;
+}
+.thanks .info .img {
+	width: 90px;
+	height: 90px;
+	background-color: #666;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.5);
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+	background-size: 100% 100%;
+
+}

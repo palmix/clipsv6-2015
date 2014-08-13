@@ -1,0 +1,265 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    background: url("images/headbg2.gif") repeat-x scroll left top #FFFFFF;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@font-face {
+    font-family: "K Karman";
+    src: url("fonts/k_kamran.eot?") format("eot"), url("fonts/k_kamran.otf") format("opentype"), url("fonts/k_kamran.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Hacen Liner Screen";
+    src: url("fonts/hacen_liner_screen.eot?") format("eot"), url("fonts/hacen_liner_screen.otf") format("opentype"), url("fonts/k_kamran.ttf") format("truetype");
+}
+@font-face {
+    font-family: "DroidArabicNaskh";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/droidnaskh-regular.eot?#iefix") format("embedded-opentype"), url("fonts/droidnaskh-regular.woff") format("woff"), url("fonts/droidnaskh-regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "DroidArabicNaskh";
+    font-style: normal;
+    font-weight: bold;
+    src: url("fonts/droidnaskh-bold.eot?#iefix") format("embedded-opentype"), url("fonts/droidnaskh-bold.woff") format("woff"), url("fonts/droidnaskh-bold.ttf") format("truetype");
+}
+body {
+    overflow: hidden;
+}
+.main {
+    background-image: url("images/main.JPG");
+    background-position: center center;
+    background-size: cover;
+}
+.header_x {
+    background: none repeat scroll 0 0 #3B5998;
+    border-bottom: 1px solid #133783;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+    height: 160px;
+    width: 100%;
+}
+.header {
+    background: url("images/headbg.gif") repeat-y scroll center top #102C41;
+    border-bottom: 1px solid #112D41;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+    height: 130px;
+    width: 100%;
+}
+.headercontent {
+    margin: 0 auto;
+    width: 980px;
+}
+.logo {
+    float: right;
+    margin-top: 10px;
+}
+#topmenu {
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+#topmenu li {
+    border-left: 1px solid #F7F7F7;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 12px;
+}
+#topmenu li:last-child {
+    border-left: 0 none;
+}
+#topmenu li a {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+.content {
+    background: none repeat scroll 0 0 #000000;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px 8px 8px 8px;
+    height: 440px;
+    margin: 10px auto;
+    opacity: 0.6;
+    text-align: right;
+    top: 130px;
+    width: 980px;
+}
+.content h3 {
+    color: #F5AE21;
+    direction: rtl;
+    font: bold 26px 'Hacen Liner Screen',arial,sans-serif;
+    margin-bottom: 20px;
+}
+.div {
+    direction: rtl;
+    height: 400px;
+    margin: 20px 40px;
+    overflow: auto;
+}
+.txt {
+    color: #FFFFFF;
+    direction: rtl;
+    font-family: 'DroidArabicNaskh',sans-serif,Arial,Verdana,Helvetica;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 2.5em;
+}
+.footer {
+    background: none repeat scroll 0 0 #102C41;
+    border-bottom: 1px solid #112D42;
+    bottom: 0;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+    height: 50px;
+    position: absolute;
+    width: 100%;
+}
+.slogos {
+    float: left;
+}
+.copyright {
+    color: #FFFFFF;
+    direction: rtl;
+    float: right;
+    font-family: 'DroidArabicNaskh',sans-serif,Arial,Verdana,Helvetica;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.innerfooter {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 980px;
+}
+.hide {
+    display: none;
+}
+#contacts-form {
+    clear: right;
+    width: 100%;
+}
+#contacts-form fieldset {
+    border: medium none;
+    float: right;
+}
+#contacts-form .field {
+    clear: both;
+    margin: 8px;
+    overflow: hidden;
+}
+#contacts-form label {
+    color: #454545;
+    float: right;
+    line-height: 18px;
+    padding-bottom: 8px;
+    width: 140px;
+}
+#contacts-form input {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #AAAAAA;
+    color: #1D5987;
+    font-family: arial;
+    font-weight: bold;
+    height: 25px;
+    padding: 5px;
+    width: 250px;
+}
+#contacts-form textarea {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #AAAAAA;
+    color: #70635B;
+    height: 180px;
+    margin-bottom: 15px;
+    padding: 1px 0 1px 3px;
+    width: 465px;
+}
+#contacts-form .link1 {
+    float: right;
+}
+#contacts-form .link1 {
+    background: url("images/buttonwide2_sprite.png") no-repeat scroll 0 0 transparent;
+    border: 0 solid white;
+    color: #333333;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    height: 36px;
+    margin-right: 150px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 95px;
+}
+#contacts-form .link1:hover {
+    background: url("images/buttonwide2_sprite.png") no-repeat scroll 0 bottom transparent;
+}
+.clear {
+    clear: both;
+}
+.info, .success, .warning, .error, .validation {
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border: 1px solid;
+    margin: 10px 0;
+    padding: 15px 10px 15px 50px;
+}
+.info {
+    background-color: #BDE5F8;
+    background-image: url("info.png");
+    color: #00529B;
+}
+.success {
+    background-color: #DFF2BF;
+    background-image: url("success.png");
+    color: red;
+}
+.warning {
+    background-color: #FEEFB3;
+    background-image: url("warning.png");
+    color: #9F6000;
+}
+.error {
+    background-color: #FFBABA;
+    background-image: url("error.png");
+    color: #D8000C;
+}
+#playerdiv {
+    height: auto !important;
+    margin: 50px;
+    overflow: visible;
+    width: auto !important;
+}
+.layout {
+    background-color: #006B9A;
+}
+.layout .content {
+    background: none repeat scroll 0 0 #333333;
+    opacity: 0.9;
+}
+.loginbutton {
+    float: right;
+    position: absolute;
+    top: 50px;
+}
