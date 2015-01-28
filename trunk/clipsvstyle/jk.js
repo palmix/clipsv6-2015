@@ -1,4 +1,6 @@
+//<![CDATA[
 echo iconv('WINDOWS-1256', 'UTF-8', $row_show['write']); 
+//]]>
 
 
 
