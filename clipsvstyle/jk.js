@@ -484,3 +484,154 @@ imgr=new Array();imgr[0]="http://1.bp.blogspot.com/-QjSndGbF0No/T-Nt3HgKsDI/AAAA
 function showrecentposts1(json){j=(showRandomImg)?Math.floor((imgr.length+1)*Math.random()):0;img=new Array();if(numposts2<=json.feed.entry.length){maxpost=numposts2}else{maxpost=json.feed.entry.length}for(var i=0;i<maxpost;i++){var entry=json.feed.entry[i];var posttitle=entry.title.$t;var pcm;var posturl;if(i==json.feed.entry.length)break;for(var k=0;k<entry.link.length;k++){if(entry.link[k].rel=='alternate'){posturl=entry.link[k].href;break}}for(var k=0;k<entry.link.length;k++){if(entry.link[k].rel=='replies'&&entry.link[k].type=='text/html'){pcm=entry.link[k].title.split(" ")[0];break}}if("content"in entry){var postcontent=entry.content.$t}else if("summary"in entry){var postcontent=entry.summary.$t}else var postcontent="";postdate=entry.published.$t;if(j>imgr.length-1)j=0;img[i]=imgr[j];s=postcontent;a=s.indexOf("<img");b=s.indexOf("src=\"",a);c=s.indexOf("\"",b+5);d=s.substr(b+5,c-b-5);if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!=""))img[i]=d;var month=[1,2,3,4,5,6,7,8,9,10,11,12];var month2=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];var day=postdate.split("-")[2].substring(0,2);var m=postdate.split("-")[1];var y=postdate.split("-")[0];for(var u2=0;u2<month.length;u2++){if(parseInt(m)==month[u2]){m=month2[u2];break}}var daystr=day+' '+m+' '+y;pcm='<a href="'+posturl+'">'+pcm+' comments</a>';var trtd='<div class="col_maskolis"><h2 class="posttitle"><a href="'+posturl+'">'+posttitle+'</a></h2><div class="play-button"><a href="'+posturl+'"><img title="'+posttitle+'" class="maskolis_img" src="'+img[i]+'"/></a></div><div class="clear"></div></div>';document.write(trtd);j++}}
 var relatedTitles=new Array();var relatedTitlesNum=0;var relatedUrls=new Array();var thumburl=new Array();function related_results_labels_thumbs(json){for(var i=0;i<json.feed.entry.length;i++){var entry=json.feed.entry[i];relatedTitles[relatedTitlesNum]=entry.title.$t;try{thumburl[relatedTitlesNum]=entry.gform_foot.url}catch(error){s=entry.content.$t;a=s.indexOf("<img");b=s.indexOf("src=\"",a);c=s.indexOf("\"",b+5);d=s.substr(b+5,c-b-5);if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!="")){thumburl[relatedTitlesNum]=d}else thumburl[relatedTitlesNum]='http://1.bp.blogspot.com/-QjSndGbF0No/T-Nt3HgKsDI/AAAAAAAAG9o/cN6_Oy306rc/s1600/no-video.gif'}if(relatedTitles[relatedTitlesNum].length>60)relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0,60)+"...";for(var k=0;k<entry.link.length;k++){if(entry.link[k].rel=='alternate'){relatedUrls[relatedTitlesNum]=entry.link[k].href;relatedTitlesNum++}}}}function removeRelatedDuplicates_thumbs(){var tmp=new Array(0);var tmp2=new Array(0);var tmp3=new Array(0);for(var i=0;i<relatedUrls.length;i++){if(!contains_thumbs(tmp,relatedUrls[i])){tmp.length+=1;tmp[tmp.length-1]=relatedUrls[i];tmp2.length+=1;tmp3.length+=1;tmp2[tmp2.length-1]=relatedTitles[i];tmp3[tmp3.length-1]=thumburl[i]}}relatedTitles=tmp2;relatedUrls=tmp;thumburl=tmp3}function contains_thumbs(a,e){for(var j=0;j<a.length;j++)if(a[j]==e)return true;return false}function printRelatedLabels_thumbs(){for(var i=0;i<relatedUrls.length;i++){if((relatedUrls[i]==currentposturl)||(!(relatedTitles[i]))){relatedUrls.splice(i,1);relatedTitles.splice(i,1);thumburl.splice(i,1);i--}}var r=Math.floor((relatedTitles.length-1)*Math.random());var i=0;if(relatedTitles.length>0)document.write('<h1>'+relatedpoststitle+'</h1>');document.write('<div style="clear: both;"/>');while(i<relatedTitles.length&&i<20&&i<maxresults){document.write('<a style="text-decoration:none;margin:0 10px 10px 0;float:right;border:solid 1px #ccc;');if(i!=0)document.write('border:solid 1px #ccc;"');else document.write('"');document.write(' href="'+relatedUrls[r]+'"><div class="play-button"><img  class="maskolis_img" src="'+thumburl[r]+'"/><br/></div><div style="width:150px;padding:0 5px;color:#222;height:50px;text-align:center;margin:0px 0px; font:14px PT Sans Narrow; line-height:16px;">'+relatedTitles[r]+'</div></a>');if(r<relatedTitles.length-1){r++}else{r=0}i++}document.write('</div>');relatedUrls.splice(0,relatedUrls.length);thumburl.splice(0,thumburl.length);relatedTitles.splice(0,relatedTitles.length)}
 //]]>
+
+////NO NEED TO EDIT BELOW////////////////////////
+
+function ddtabcontent(tabinterfaceid){
+	this.tabinterfaceid=tabinterfaceid //ID of Tab Menu main container
+	this.tabs=document.getElementById(tabinterfaceid).getElementsByTagName("a") //Get all tab links within container
+	this.enabletabpersistence=true
+	this.hottabspositions=[] //Array to store position of tabs that have a "rel" attr defined, relative to all tab links, within container
+	this.currentTabIndex=0 //Index of currently selected hot tab (tab with sub content) within hottabspositions[] array
+	this.subcontentids=[] //Array to store ids of the sub contents ("rel" attr values)
+	this.revcontentids=[] //Array to store ids of arbitrary contents to expand/contact as well ("rev" attr values)
+	this.selectedClassTarget="link" //keyword to indicate which target element to assign "selected" CSS class ("linkparent" or "link")
+}
+
+ddtabcontent.getCookie=function(Name){ 
+	var re=new RegExp(Name+"=[^;]+", "i"); //construct RE to search for target name/value pair
+	if (document.cookie.match(re)) //if cookie found
+		return document.cookie.match(re)[0].split("=")[1] //return its value
+	return ""
+}
+
+ddtabcontent.setCookie=function(name, value){
+	document.cookie = name+"="+value+";path=/" //cookie value is domain wide (path=/)
+}
+
+ddtabcontent.prototype={
+
+	expandit:function(tabid_or_position){ //PUBLIC function to select a tab either by its ID or position(int) within its peers
+		this.cancelautorun() //stop auto cycling of tabs (if running)
+		var tabref=""
+		try{
+			if (typeof tabid_or_position=="string" && document.getElementById(tabid_or_position).getAttribute("rel")) //if specified tab contains "rel" attr
+				tabref=document.getElementById(tabid_or_position)
+			else if (parseInt(tabid_or_position)!=NaN && this.tabs[tabid_or_position].getAttribute("rel")) //if specified tab contains "rel" attr
+				tabref=this.tabs[tabid_or_position]
+		}
+		catch(err){alert("Invalid Tab ID or position entered!")}
+		if (tabref!="") //if a valid tab is found based on function parameter
+			this.expandtab(tabref) //expand this tab
+	},
+
+	cycleit:function(dir, autorun){ //PUBLIC function to move foward or backwards through each hot tab (tabinstance.cycleit('foward/back') )
+		if (dir=="next"){
+			var currentTabIndex=(this.currentTabIndex<this.hottabspositions.length-1)? this.currentTabIndex+1 : 0
+		}
+		else if (dir=="prev"){
+			var currentTabIndex=(this.currentTabIndex>0)? this.currentTabIndex-1 : this.hottabspositions.length-1
+		}
+		if (typeof autorun=="undefined") //if cycleit() is being called by user, versus autorun() function
+			this.cancelautorun() //stop auto cycling of tabs (if running)
+		this.expandtab(this.tabs[this.hottabspositions[currentTabIndex]])
+	},
+
+	setpersist:function(bool){ //PUBLIC function to toggle persistence feature
+			this.enabletabpersistence=bool
+	},
+
+	setselectedClassTarget:function(objstr){ //PUBLIC function to set which target element to assign "selected" CSS class ("linkparent" or "link")
+		this.selectedClassTarget=objstr || "link"
+	},
+
+	getselectedClassTarget:function(tabref){ //Returns target element to assign "selected" CSS class to
+		return (this.selectedClassTarget==("linkparent".toLowerCase()))? tabref.parentNode : tabref
+	},
+
+	urlparamselect:function(tabinterfaceid){
+		var result=window.location.search.match(new RegExp(tabinterfaceid+"=(\\d+)", "i")) //check for "?tabinterfaceid=2" in URL
+		return (result==null)? null : parseInt(RegExp.$1) //returns null or index, where index (int) is the selected tab's index
+	},
+
+	expandtab:function(tabref){
+		var subcontentid=tabref.getAttribute("rel") //Get id of subcontent to expand
+		//Get "rev" attr as a string of IDs in the format ",john,george,trey,etc," to easily search through
+		var associatedrevids=(tabref.getAttribute("rev"))? ","+tabref.getAttribute("rev").replace(/\s+/, "")+"," : ""
+		this.expandsubcontent(subcontentid)
+		this.expandrevcontent(associatedrevids)
+		for (var i=0; i<this.tabs.length; i++){ //Loop through all tabs, and assign only the selected tab the CSS class "selected"
+			this.getselectedClassTarget(this.tabs[i]).className=(this.tabs[i].getAttribute("rel")==subcontentid)? "selected" : ""
+		}
+		if (this.enabletabpersistence) //if persistence enabled, save selected tab position(int) relative to its peers
+			ddtabcontent.setCookie(this.tabinterfaceid, tabref.tabposition)
+		this.setcurrenttabindex(tabref.tabposition) //remember position of selected tab within hottabspositions[] array
+	},
+
+	expandsubcontent:function(subcontentid){
+		for (var i=0; i<this.subcontentids.length; i++){
+			var subcontent=document.getElementById(this.subcontentids[i]) //cache current subcontent obj (in for loop)
+			subcontent.style.display=(subcontent.id==subcontentid)? "block" : "none" //"show" or hide sub content based on matching id attr value
+		}
+	},
+
+	expandrevcontent:function(associatedrevids){
+		var allrevids=this.revcontentids
+		for (var i=0; i<allrevids.length; i++){ //Loop through rev attributes for all tabs in this tab interface
+			//if any values stored within associatedrevids matches one within allrevids, expand that DIV, otherwise, contract it
+			document.getElementById(allrevids[i]).style.display=(associatedrevids.indexOf(","+allrevids[i]+",")!=-1)? "block" : "none"
+		}
+	},
+
+	setcurrenttabindex:function(tabposition){ //store current position of tab (within hottabspositions[] array)
+		for (var i=0; i<this.hottabspositions.length; i++){
+			if (tabposition==this.hottabspositions[i]){
+				this.currentTabIndex=i
+				break
+			}
+		}
+	},
+
+	autorun:function(){ //function to auto cycle through and select tabs based on a set interval
+		this.cycleit('next', true)
+	},
+
+	cancelautorun:function(){
+		if (typeof this.autoruntimer!="undefined")
+			clearInterval(this.autoruntimer)
+	},
+
+	init:function(automodeperiod){
+		var persistedtab=ddtabcontent.getCookie(this.tabinterfaceid) //get position of persisted tab (applicable if persistence is enabled)
+		var selectedtab=-1 //Currently selected tab index (-1 meaning none)
+		var selectedtabfromurl=this.urlparamselect(this.tabinterfaceid) //returns null or index from: tabcontent.htm?tabinterfaceid=index
+		this.automodeperiod=automodeperiod || 0
+		for (var i=0; i<this.tabs.length; i++){
+			this.tabs[i].tabposition=i //remember position of tab relative to its peers
+			if (this.tabs[i].getAttribute("rel")){
+				var tabinstance=this
+				this.hottabspositions[this.hottabspositions.length]=i //store position of "hot" tab ("rel" attr defined) relative to its peers
+				this.subcontentids[this.subcontentids.length]=this.tabs[i].getAttribute("rel") //store id of sub content ("rel" attr value)
+				this.tabs[i].onclick=function(){
+					tabinstance.expandtab(this)
+					tabinstance.cancelautorun() //stop auto cycling of tabs (if running)
+					return false
+				}
+				if (this.tabs[i].getAttribute("rev")){ //if "rev" attr defined, store each value within "rev" as an array element
+					this.revcontentids=this.revcontentids.concat(this.tabs[i].getAttribute("rev").split(/\s*,\s*/))
+				}
+				if (selectedtabfromurl==i || this.enabletabpersistence && selectedtab==-1 && parseInt(persistedtab)==i || !this.enabletabpersistence && selectedtab==-1 && this.getselectedClassTarget(this.tabs[i]).className=="selected"){
+					selectedtab=i //Selected tab index, if found
+				}
+			}
+		} //END for loop
+		if (selectedtab!=-1) //if a valid default selected tab index is found
+			this.expandtab(this.tabs[selectedtab]) //expand selected tab (either from URL parameter, persistent feature, or class="selected" class)
+		else //if no valid default selected index found
+			this.expandtab(this.tabs[this.hottabspositions[0]]) //Just select first tab that contains a "rel" attr
+		if (parseInt(this.automodeperiod)>500 && this.hottabspositions.length>1){
+			this.autoruntimer=setInterval(function(){tabinstance.autorun()}, this.automodeperiod)
+		}
+	} //END int() function
+
+} //END Prototype assignment
