@@ -1751,7 +1751,3 @@ font:bold 12px Droid Arabic Kufi,PT Sans Narrow;
 .clipsloader:active{
 background: #000;
 }
-
- #related-posts { float : right; width : 100%;   } #related-posts .widget { list-style-type : none; margin : 5px 0 5px 0; padding : 0; } #related-posts .widget h2, #related-posts h2 { font-size : 11px; font-weight : normal; margin : 5px 7px 0; padding : 0 0 5px; } #related-posts a { text-decoration : none; } #related-posts a:hover { text-decoration : none; padding-right:2px;} #related-posts ul { border : medium none; margin : 1px; padding : 0; } #related-posts ul li { display : block; background : url("http://lh3.ggpht.com/_cNpXRtRph18/S76dASm3WGI/AAAAAAAAEJg/AVmw4HhRdsk/rss.png") no-repeat 0 0; margin : 0; padding-top : 0; padding-right : 0; padding-bottom : 1px; padding-left : 21px; margin-bottom : 5px; line-height : 2em; border-bottom:1px dotted #000000; } #related-posts a{font-size: 9px;}
-
-  li.footer__right-items.social-twitter,li.footer__right-items.social-facebook,li.footer__right-items.social-google{list-style:none outside none;display:block;font-size:13px;margin:1px 1px 1px}
