@@ -941,5 +941,18 @@ body.loading{font: normal 10px Droid Arabic Kufi,Arial}
 span.post-labels{font:700 9px Droid Arabic Kufi,arial,Oswald,Arial, Helvetica, Clean;}
 
 
-
+.clipsloader a{text-decoration:none;display:block;width:100%;color:#F7532C;}
+.clipsloader {
+  background: #777;background: -moz-linear-gradient(top,#bbb,#777);background: -webkit-linear-gradient(top,#2C2B2B,#000000);
+  border: 1px solid #000000;
+  border-radius: 3px;
+font:bold 12px Droid Arabic Kufi,PT Sans Narrow;
+  padding: 3px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: all 0.8s ease 0s;
+}
+.clipsloader:active{
+background: #000;
+}
 
