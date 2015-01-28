@@ -1732,5 +1732,9 @@ body.loading{font: normal 10px Droid Arabic Kufi,Arial}
 span.post-labels{font:700 9px Droid Arabic Kufi,arial,Oswald,Arial, Helvetica, Clean;}
 
 
+.mobile-date-outer.date-outer {
+Height: 83px;
+line-height: 1em;
+    }
 
 
