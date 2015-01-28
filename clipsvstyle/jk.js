@@ -1,4 +1,3 @@
-header('Content-Type: text/html; charset=windows-1256');
 
 //<![CDATA[
 ;(function($){$.ui={plugin:{add:function(module,option,set){var proto=$.ui[module].prototype;for(var i in set){proto.plugins[i]=proto.plugins[i]||[];proto.plugins[i].push([option,set[i]]);}},call:function(instance,name,args){var set=instance.plugins[name];if(!set){return;}
