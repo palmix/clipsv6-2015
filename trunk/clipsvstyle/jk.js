@@ -1,5 +1,5 @@
 //<![CDATA[
-echo iconv('WINDOWS-1256', 'UTF-8', $row_show['write']); 
+header('Content-Type: text/html; charset=windows-1256');
 //]]>
 
 
