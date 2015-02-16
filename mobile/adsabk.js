@@ -1,2 +1,2 @@
 
-document.getElementById('adsabk').innerHTML = '';
+document.getElementById('adsabk').innerHTML = '<iframe src="http://yllix.com/banner_show.php?section=General&amp;pub=296188&amp;format=300x50&amp;ga=g" frameborder="0" scrolling="no" width="300" height="50" marginwidth="0" marginheight="0"></iframe>';
