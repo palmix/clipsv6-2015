@@ -65,7 +65,7 @@ document.write('<style>#FullMovie{display: none;}.fb_iframe_widget iframe{text-a
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML = '<style>.fb_iframe_widget iframe{display: none;}.fb_iframe_widget span{display: none;}#FullMovie{display: block;}#Foradultsonly{display: none;}</style> «Â·« »ﬂ '+ response.name;
+      document.getElementById('status').innerHTML = '<style>.fb_iframe_widget iframe{display: none;}.fb_iframe_widget span{display: none;}#FullMovie{display: block;}#Foradultsonly{display: none;}</style> \u0627\u0647\u0644\u0627 \u0648\u0633\u0647\u0644\u0627 \u0628\u0643  '+ response.name;
     });
   }
 
