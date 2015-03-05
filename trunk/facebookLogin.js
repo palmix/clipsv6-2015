@@ -70,4 +70,4 @@ document.write('<style>#FullMovie{display: none;}.fb_iframe_widget iframe{text-a
   }
 
 
-document.write('<div  align="center"><fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button><div id="status"></div></div>');
+document.write('<div  align="center"><fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();"></fb:login-button><div id="status"></div></div>');
