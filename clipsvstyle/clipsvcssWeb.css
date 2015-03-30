@@ -86,10 +86,10 @@ a.dat_view{background:url(http://1.bp.blogspot.com/-43EW3Gjakwc/T6vZz6K4N_I/AAAA
 #featured .ui-tabs-panel{width:517px;height:320px;background:#ddd;position:relative;overflow:hidden}
 #featured .ui-tabs-panel img{width: 100%; height: 100%;}
 #featured .ui-tabs-hide{display:none}
-#featured li.ui-tabs-nav-item a{display:block;width:175px;height:76px;color:#000;overflow:hidden;background:#333;border-left:10px solid #111;line-height:1.4em;outline:none;border-top:1px solid #444;border-bottom:1px solid #000;padding:1px 10px 1px 5px}
-#featured li.ui-tabs-nav-item a:hover{border-left:10px solid #555;background:#de3007 url(http://4.bp.blogspot.com/-tpWMipVT9-U/T9354pT2otI/AAAAAAAAG4s/hSgnH2izZZ4/s1600/hover.png) repeat-x top}
+#featured li.ui-tabs-nav-item a{display:block;width:175px;height:76px;color:#000;overflow:hidden;background:#333;border-right: 10px solid #111;line-height:1.4em;outline:none;border-top:1px solid #444;border-bottom:1px solid #000;padding:1px 10px 1px 5px}
+#featured li.ui-tabs-nav-item a:hover{border-right: 10px solid #555;background:#de3007 url(http://4.bp.blogspot.com/-tpWMipVT9-U/T9354pT2otI/AAAAAAAAG4s/hSgnH2izZZ4/s1600/hover.png) repeat-x top}
 #featured li.ui-tabs-selected{position:absolute}
-#featured ul.ui-tabs-nav li.ui-tabs-selected a{background:#de3007 url(http://4.bp.blogspot.com/-tpWMipVT9-U/T9354pT2otI/AAAAAAAAG4s/hSgnH2izZZ4/s1600/hover.png) repeat-x top;display:block;border-left:10px solid #444}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a{background:#de3007 url(http://4.bp.blogspot.com/-tpWMipVT9-U/T9354pT2otI/AAAAAAAAG4s/hSgnH2izZZ4/s1600/hover.png) repeat-x top;display:block;border-right: 10px solid #444}
 #featured ul.ui-tabs-nav li img{width:100px;height:69px;float:left;background:#333;border:none;margin : 5px 3px 5px 0px;padding:0}
 #featured .ui-tabs-panel .info{position:absolute;background:url(http://4.bp.blogspot.com/-bp2HK6MdDXg/T5aB6vI5GPI/AAAAAAAAF98/gwCsmb8Fcks/s1600/transparant.png);width:160px;height:320px;top:0;right:0;padding:8px}
 #featured .info a{text-decoration:none;color:#fc6e2c}
