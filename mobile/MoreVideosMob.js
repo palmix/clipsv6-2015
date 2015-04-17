@@ -12,7 +12,7 @@ thumburl=d;} else thumburl='http://2.bp.blogspot.com/-fyukB_HLG_w/UbManI7ySAI/AA
 document.write('<div class="sitemap-container">'+'<ul id="list">'+'<li>');
 
 if(showpostthumbnails==true) 
-document.write('<div class="thumbnail">'+'<a href="'+posturl+'"><img id="postimg" src="'+thumburl+'" title="'+posttitle+'" alt="'+posttitle+'" style="width:60px;height:60px;"/></a>'+'</div>');
+document.write('<div class="thumbnail">'+'<a href="'+posturl+'"><img id="postimg" src="'+thumburl+'?imgmax=100&title=\u0643\u0644\u0628\u0633-\u0641\u0631\u0627\u064a\u062a\u064a" title="'+posttitle+'" alt="'+posttitle+'" style="width:60px;height:60px;"/></a>'+'</div>');
    
 
 var towrite='';var flag=0;
